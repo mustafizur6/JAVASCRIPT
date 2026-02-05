@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of dom</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        li{
+            color: tomato;
+        }
+        #fruits_title{
+            color: chartreuse;
+        }
+        .same{
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Wellcome to my dom</h2>
+        <h1>Mustafizur Rahman</h1>
+    </header>
+    <main id="main">
+      <section class="wife">
+        <p>Hello My lovely wife</p>
+        <ul>
+            <li>jan I love you</li>
+            <li>Today is my special day</li>
+        </ul>
+        <ul>
+            <li>jan I love you</li>
+            <li>Today is my special day</li>
+        </ul>
+      </section>
+        <section id="fruitss_container" class="fruits_container">
+            <h1 id="fruits_title" class="hello jan">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orrange</li>
+            </ul>
+        </section>
+        <section id="places_container" class="places_container">
+            <h1 id="place_title">Places I like to visit</h1>
+            <ul id="placeList">
+                <li>Sundarban</li>
+                <li>KaTARBAN</li>
+                <li class="same">sALBAN</li>
+                <li class="same">Tetulia</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        console.log('Adding js inside html')
+        console.log(document.body)
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection)
+        for(const li of liCollection){
+            console.log(li.innerText)
+        }
+        const allHeadings = document.getElementsByTagName('h1');
+        
+        for(const heading of allHeadings){
+            console.log(heading.innerText)
+        }
+    </script>
+        <script src="dom.js"></script>
+        <script src="append.js"></script>
+        <script src="style.js"></script>
+</body>
+</html>
