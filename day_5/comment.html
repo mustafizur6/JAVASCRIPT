@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Please add your co mment</h1>
+    <div id="div">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nemo sint, quo laborum commodi atque neque harum omnis ipsa. Quisquam aut nihil quam ipsum vel optio neque illum reiciendis saepe?</p>
+        <p>Doloremque obcaecati maxime asperiores itaque, a, facilis corporis sapiente possimus laboriosam natus, nemo voluptatum omnis autem reprehenderit amet adipisci. Ratione tempora eos, illum recusandae ipsam maiores. Distinctio corrupti magnam id!</p>
+        <p>Commodi, harum ducimus accusamus veniam odio, itaque voluptate saepe consectetur dolorum numquam pariatur minus autem veritatis accusantium dolores deleniti? A dolorem ipsum explicabo reprehenderit possimus sit molestiae, odit enim veritatis.</p>
+        
+    </div>
+    <div>
+        <textarea  name="" id="textArea" cols="50" rows="6"></textarea>
+        <br>
+        <button id="post">Post</button>
+    </div>
+    <script>
+        document.getElementById('post').addEventListener('click', function(){
+            const p = document.createElement('p');
+            p.innerText = document.getElementById('textArea').value;
+            const div = document.getElementById('div');
+            div.appendChild(p)
+            document.getElementById('textArea').value = '';
+        })
+    </script>
+</body>
+</html>

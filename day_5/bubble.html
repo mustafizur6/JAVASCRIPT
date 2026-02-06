@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble</title>
+</head>
+<body>
+    <h2>Exploring event bubble</h2>
+      <section id="section_container">
+        <ul id="list_ul">
+            <li id="item_1">Lorem, ipsum.</li>
+            <li id="item_2">Id, commodi?</li>
+            <li id="item_3">Corporis, quisquam!</li>
+            <li id="item_4">Ipsam, suscipit.</li>
+            <li id="item_5">Possimus, earum!</li>
+            <li id="item_6">Laborum, blanditiis.</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('item_2').addEventListener('click', (event) => {
+            console.log('item - 2 click')
+            event.stopPropagation()
+        })
+        document.getElementById('item_3').addEventListener('click', (event) => {
+            console.log('item - 3 click')
+        })
+        document.getElementById('item_3').addEventListener('click', (event) => {
+            console.log('item - 33 click')
+            event.stopImmediatePropagation()
+        })
+        document.getElementById('item_3').addEventListener('click', (event) => {
+            console.log('item - 34 click')
+        })
+        document.getElementById('item_3').addEventListener('click', (event) => {
+            console.log('item - 36 click')
+            event.stopImmediatePropagation()
+        })
+
+        document.getElementById('list_ul').addEventListener('click', (event) => {
+            console.log('list ul click')
+            event.stopImmediatePropagation()
+        })
+        
+        document.getElementById('section_container').addEventListener('click', (event) => {
+            console.log('section container click')
+        })
+    </script>
+</body>
+</html>

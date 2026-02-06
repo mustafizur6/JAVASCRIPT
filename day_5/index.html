@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM er ajke special events</h1>
+    <button onclick="console.log('Hello jan') ">click me</button>
+    <button onclick="document.body.style.backgroundColor = 'yellow'">Make Yellow</button>
+    <button onclick="makeRed()">Make Red</button>
+    <button id="green">Make Green</button>
+    <button id="blue">Make Blue</button>
+    <button id="lightBlue">light Blue</button>
+    <button id="makePink">Make Pink</button>
+    <script>
+        function makeRed(){
+            document.body.style.backgroundColor = 'red'
+        }
+        const pinkButton = document.getElementById('makePink');
+        pinkButton.addEventListener('click', function makePinkColor(){
+            document.body.style.backgroundColor = 'pink'
+        } )
+        
+    </script>
+    <script src="event.js"></script>
+</body>  
+</html> 

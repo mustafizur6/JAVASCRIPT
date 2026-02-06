@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Explore Event Delegation</h2>
+    <section>
+        <ul id="list_container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">In, vitae aliquid?</li>
+            <li class="item">Repellat, aperiam fugiat.</li>
+            <li class="item">Facilis, ratione sapiente.</li>
+            <li class="item">Quod, eligendi consequatur?</li>
+            <li class="item">Magni, adipisci laudantium?</li>
+        </ul>
+        <button id="btn_add_item">Add Item</button>
+    </section>
+
+    <script>
+        // const items = document.getElementsByClassName('item')
+        // for(const item of items){
+        //    item.addEventListener('click', (event) => {
+        //     // console.log(event.target.parentNode)
+        //     event.target.parentNode.removeChild(event.target)
+        //    })
+        // }
+
+        document.getElementById('list_container').addEventListener('click', (event)=> {
+            event.target.parentNode.removeChild(event.target)
+        })
+
+        
+        document.getElementById('btn_add_item').addEventListener('click', () => {
+            const listContainer = document.getElementById('list_container')
+            const li = document.createElement('li');
+            li.innerText = 'brand new item'
+            li.classList.add('item')
+            listContainer.appendChild(li)
+        })
+        
+    </script>
+</body>
+</html>
